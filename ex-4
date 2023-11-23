@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int startsAndEndsWithSameChar(char str[]);
+
+int main() {
+    char input[100];
+    printf("Enter the string: ");
+    scanf("%s", input);
+    if (startsAndEndsWithSameChar(input)) {
+        printf("accepted.\n");
+    } else {
+        printf("not accepted.\n");
+    }
+
+    return 0;
+}
+
+int startsAndEndsWithSameChar(char str[]) {
+    int len = strlen(str);
+    if (len > 0 && str[0] == str[len - 1]) {
+        return 1;
+    }
+
+    return 0;
+}
